@@ -40,6 +40,9 @@ angular.module('angularRestfulAuth')
             signup: function(data, success, error) {
                 $http.post(baseUrl + '/account/registration', data).success(success).error(error)
             },
+            signin: function(data, success, error) {
+                $http.post(baseUrl + '/account/login', data).success(success).error(error)
+            },
             me: function(success, error) {
                 $http.get(baseUrl + '/profile').success(success).error(error)
             },
